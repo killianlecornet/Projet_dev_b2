@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.start-screen {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 14%;
+    background-color: beige;
+    padding-bottom: 1%;
+}
+
+.start-screen h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #111;
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+
+.gameplay-choices button {
+    padding: 5px 25px;
+    background: black;
+    color: white;
+    outline: none;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 32%;
+}
+
+.start-screen button:hover {
+    background:red;
+    cursor: pointer;
+}
+
+.create-room-box {
+    display: none;
+}
+
+.join-with-id,
+.create-room-box {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.join-with-id input,
+.create-room-box input {
+    width: 80%;
+    height: 35px;
+    border: 1px solid #333;
+    outline: none;
+    padding: 5px;
+    margin: 0;
+}
+
+.join-with-id button,
+.create-room-box button {
+    width: 80%;
+    margin: 0;
+    height: 35px;
+    background: black;
+    color: white;
+    outline: none;
+    border: none;
+    margin-left: 10%;
+}
+
+.join-with-id .cancel-action,
+.create-room-box .cancel-action {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #ccc;
+    color: #333;
+}
+
+.cancel-action:hover {
+    background: #ddd !important;
+}
+
+.gameplay-screen {
+    display: none;
+}
+
+.wait-message {
+    padding-top: 1%;
+    margin: 0 auto;
+    padding-bottom: 1%;
+    background-color: darkseagreen;
+}
+
+.wait-message p {
+    text-align: center;
+}
+
+.connected-players {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    background-color: darkseagreen;
+    padding-bottom: 1%;
+}
+
+.connected-players .player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connected-players .player .dot {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.connected-players .player .connected {
+    background: green;
+}
+
+.connected-players .player:first-child {
+    margin-right: 30px;
+}
+
+.choices {
+    width: 66%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .7s ease-in;
+    padding-top: 5%;
+}
+
+.choice {
+    font-size: 5rem;
+    margin-right: 40px;
+}
+
+.choice:last-child {
+    margin-right: 0;
+}
+
+.choice:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.score {
+    width: 24%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.score>span {
+    font-weight: bold;
+    background: #123456;
+    color: white;
+    padding: 10px;
+}
+
+.score span#score {
+    font-weight: normal;
+}
+
+.score>span:first-child {
+    margin-bottom: 20px;
+}
+
+.message-after-choice-selection {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.message-after-choice-selection p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.join-room-box {
+    display: none;
+}
+
+.join-room-box .join-random {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    height: 35px;
+    background:black;
+    color: white;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+}
+
+.error-message {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: none;
+    background: rgb(209, 61, 61);
+    color: white;
+    padding: 20px;
+}
+
+.error-message p {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.my-choice {
+    color: green;
+}
+
+.enemy-choice {
+    color: red;
+}
+
+.choice img {
+    width: 94%;
+}
+
+.header_main {
+    background-color: chartreuse;
+}
+
+.footer .footer__list {
+    justify-content: space-around;
+    padding-top: 2%;
+    color: white;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+
+.footer .footer__list p{
+    text-transform: uppercase;
+}
+
+.footer .footer__button {
+    font-size: 75%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: 1px white solid;
+    width: 85%;
+    text-align: center;
+    box-shadow: 4px 5px 0px white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.footer hr{
+    
+    border: none;
+    border-top: 3px double white;
+    opacity: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+.footer .end__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer img {
+    width: 7%;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>¨Pierre Feuille Ciseaux</title>
+</head>
+
+<body>
+    <div class="start-screen">
+        <h1>Pierre Papier Ciseaux </h1>
+
+        <div class="gameplay-choices" id="gameplay-choices">
+            <button id="open-create-room-box">Creer une partie</button>
+            <button id="open-join-room-box">Rejoindre une partie</button>
+        </div>
+
+        <div class="create-room-box" id="create-room-box">
+            <input type="hidden" id="room-id" value="test"><button id="create-room-btn">Creer</button>
+
+            <button id="cancel-create-action" class="cancel-action">retour au menu</button>
+        </div>
+
+        <div class="join-room-box" id="join-room-box">
+            <div class="join-with-id">
+                <input style="display: none;" type="text" id="join-room-input"><button style="display: none;" id="join-room-btn">Rejoindre</button>
+
+                <button style="display: none;" id="cancel-join-action" class="cancel-action">retour au menu</button>
+            </div>
+
+            <button class="join-random" id="join-random">Rejoindre la partie</button>
+        </div>
+
+        <div class="error-message" id="error-message">
+        </div>
+    </div>
+
+    <div class="gameplay-screen">
+        <div class="header_main">
+            <div class="connected-players">
+                <div class="player">
+                    <span class="dot" id="player-1"></span> <span id="player-1-tag"></span>
+                </div>
+
+                <div class="player">
+                    <span class="dot" id="player-2"></span> <span id="player-2-tag"></span>
+                </div>
+            </div>
+
+            <div class="score">
+                <span>Toi: <span id="my-score">0</span></span>
+                <span>Adversaire: <span id="enemy-score">0</span></span>
+            </div>
+
+            <div class="wait-message" id="wait-message">
+                <p>En attente d'un joueur ...</p>
+            </div>       
+    </div>
+    <div class="message-after-choice-selection" id="win-message"></div>
+        <div class="choices">
+            <div class="choice" id="pierre">
+                <img src="./img/rocher.jpg" alt="">
+            </div>
+
+            <div class="choice" id="feuille">
+                <img src="./img/feuille.jpg" alt="">
+            </div>
+
+            <div class="choice" id="ciseaux">
+                <img src="./img/ciso.jpg" alt="">
+            </div>
+        </div>
+
+
+
+        <div class="footer" style="background-image: url('./img/background.jpg');"> 
+            <div class="footer__list">
+                <img src="./img/pierre.png" alt="">
+                <img src="./img/feuille.png" alt="">
+                <img src="./img/ciseaux.png" alt="">
+            <li>
+                <h2>Créer par: </h2>
+                <br>
+                <p>Killian Lecornet</p>
+                <p>Sarangan Rajendram</p>
+                <p>Alexandre Hamza</p>
+            </li>
+                
+            
+            <li>
+                <h2>suivez-nous </h2>
+                <i class="fab fa-facebook"><p></p></i><i class="fab fa-twitter" style="margin-left: 25%; margin-right: 25%;"></i><i class="fab fa-instagram"></i>
+            </li>  
+            </div>
+    
+           <hr>
+           <div class="end__footer">
+               <p>Paris Ynov</p><p>2021 Pierre Feuille Ciseaux</p>
+           </div>
+            
+        </div>
+
+        </div>
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/index.js "></script>
+</body>
+
+</html>
